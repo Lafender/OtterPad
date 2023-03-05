@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- This is the Preview html file   -->
+<!-- it includes all of the code for -->
+<!-- OtterLake website in a single   -->
+<!-- html file.                      -->
+
+<!-- Date Created : 2023 03 04 -->
+<html>
+    <head>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <style>
+            body {
+                min-height: 100vh;
+            }
+            html, body {
+                background-color : gray;
+                font-family : Montserrat ;
+            }
+            div {
+                background-color : lightgray ;
+            }
+            .layout {
+                background-colour : lightgray ;
+                width: 100%;
+                height: 100%;
+
+                display: grid;
+                grid:
+                    "header header header" auto
+                    "leftSide body rightSide" 1fr
+                    "footer footer footer" auto
+                    / auto 1fr auto;
+                gap: 8px;
+            }
+            #OtterLakeDiv {
+                background-color : lightgray ;
+            }
+            .header { grid-area: header; }
+            .leftSide { grid-area: leftSide; }
+            .body { grid-area: body; text-align : center ; background-color : darkgray}
+            .rightSide { grid-area: rightSide; }
+            .footer { grid-area: footer; }
+            
+            .flexcontainer {
+                display : flex ;
+            }
+            ol {
+                display : flex ;
+                list-style-type: none;
+            }
+            p {
+                font-family : Roboto ;
+            }
+        </style>
+        <!-- Sample Code for Loading Javascript from file -->
+        <!--<script type="text/javascript" src="./Default/Scripts/loadlayout.js"></script>-->
+        <script>
+            // Load User Content
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="pagelogo">
+                <img>Logo</img>
+            </div>
+            <div class="pagename">
+                <h1>Name</h1>
+            </div>
+            <div class="nav">
+                <nav class="flexcontainer">
+                    <ol>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Apps</li>
+                        <li>Art</li>
+                        <li>Docs</li>
+                        <li>Tools</li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+        <h1>Otter Lake</h1>
+        <div id="OtterLakeDiv">
+            <section class="layout">
+                <div class="header">
+                    Home
+                </div>
+                <div class="leftSide">
+                    <h4>Nav</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>PrismaticJellyfish</li>
+                        <li>OtterFloat</li>
+                        <li>MountainDog</li>
+                        <li>OtterPants</li>
+                        <li>OtterWofl</li>
+                        <li>OtterDocs</li>
+                        <li>OtterPad<</li>
+                        <li>Links</li>
+                        <li>Affiliates</li>
+                    </ul>
+                </div>
+                <div class="body">
+                    <p>Welcome to Otter Lake !</p>
+                    <p>This is the Homepage of the website Otter Lake.</p>
+                    <p>The Code for Prismatic Jellyfish, Otter Float, and Mountain Dog are available on:  https://www.GitHub.com/Lafender/PrismaticJellyfish</p>
+                    <p>These Projects are an attempt to share basic Front-End Programming tips and Structures. They are available in Web Languages currently. </p>
+                    <p></p>
+                    <ul>Plans: 
+                        <li>Integrate Blockly for use for light visual-programming, with permission.</li>
+                        <li>Add Basic File Editing Tools and Visualizations (Views, svgs)</li>
+                        <li>Add Cloud/Web-Based Tools for Public Access to File and Directory Manipulation and Data Structure Algorithms (Lite user-configured ML and Predictive/Contextual Assistance)</li>
+                    </ul>
+                </div>
+                <div class="rightSide">
+                    <p>Otter Pad</p>
+                    <p>Text Edit</p>
+                    <p>Enter Title</p>
+                    <p>Enter Text</p>
+                    <p>Text Version Number</p>
+                    <p>Text Export Button</p>
+                    <p>Save</p>
+                    <p>Button</p>
+                    <p></p>
+                    <p>Save As</p>
+                    <p>Button</p>
+                    <p></p>
+                    <p>Open</p>
+                    <p>Button</p>
+                    <p></p>
+                    <p>Run</p>
+                    <p>Button</p>
+                    <p></p>
+                    <p>Preview Link</p>
+                </div>
+                <div class="footer">
+                    Otter Lake View
+                </div>
+            </section>
+            <footer>
+                <p>Otter Lake</p>
+                <p>2023</p>
+                <p>Otter Lake Website</p>
+            </footer>
+        </div>
+    </body>
+</html>
