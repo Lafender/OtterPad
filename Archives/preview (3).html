@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- add google fonts links here -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- end of google fonts links -->
+        <title>Otter Pad</title>
+        <!-- AFTER all other Prismatic Jellyfish <head> content -->
+        <!-- put Prismatic Scripts here -->
+        <script>
+            // assign DOM variable names here
+            // get OtterPad buttons (all)
+            const enterbutton = document.getElementById("enterbutton");
+            const downloadbutton = document.getElementById("downloadbutton");
+            const openbutton = document.getElementById("openbutton");
+            const runbutton = document.getElementById("runbutton");
+            // create a directory for Otter Pad Buttons
+            const OtterPadButtonsList = {
+                "enterbutton" : enterbutton;
+                "downloadbutton" : downloadbutton;
+                "openbutton" : openbutton;
+                "runbutton" : runbutton;
+            };
+            // end of DOM variable name assignments
+            //
+            // first in Prismatic Jellyfish <head> scripts :
+            // put Script files (.js) loaders here
+            //
+            // FOR PREVIEW.HTML
+            // *no external files in preview.html*
+            //
+            // end of external .js files
+            // start of Prismatic Jellyfish Button Listeners
+            //
+//             element.addEventListener("click", myFunction);
+//
+//             function myFunction() {
+//             document.getElementById("demo").innerHTML = "Hello World";
+//             }
+            //
+            // end of Prismatic Jellyfish Button Listeners
+        </script>
+        <!-- end of Prismatic Scripts -->
+    </head>
+    <body>
+        <!-- "class=layout" provided by https://layout.bradwoods.io/ -->
+        <section class="layout">
+            <div class="header">1</div>
+            <div class="leftSide">2</div>
+            <div class="body">3</div>
+            <div class="otterPad" width="100%">
+                <div class="otterPadTitle">
+                    <h3>Otter Pad </h3>
+                    <svg
+                    width="100%"
+                    height="0.2mm"
+                    viewBox="0 0 185 0.2"
+                    version="1.1"
+                    id="pageline"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg"
+                    >
+                    <defs id="defs2" />
+                    <g
+                        id="layer1"
+                        transform="translate(-10.5,-10.4)">
+                        <path
+                            style="
+                                fill:none;
+                                stroke:#ffffff;
+                                stroke-width:0.2px;
+                                stroke-linecap:butt;
+                                stroke-linejoin:miter;
+                                stroke-opacity:1
+                            "
+                            d="M 10.5,10.5 H 195"
+                            id="pagelinepath"
+                        />
+                    </g>
+                    </svg>
+                </div>
+                <div class="otterPadTextInput">
+                    <h4>Text Edit : </h4>
+                    <label for="otterpadtextinput">Text Edit : </label>
+                    <br>
+                    <input type="text" id="otterpadtextinput" name="otterpadtextinput"></input>
+                    <br>
+                </div>
+                <div class="otterPadExportButtons">
+                    <div class="textexportbuttons">
+                        <div>
+                            <p>Enter</p>
+                            <p><button id="enterbutton">🐁</button></p>
+                        </div>
+                        <div>
+                            <p>Download</p>
+                            <p><button id="downloadbutton">🐹</button></p>
+                        </div>
+                        <div>
+                            <p>Open</p>
+                            <p><button id="openbutton">🐰</button></p>
+                        </div>
+                        <div>
+                            <p>Reset</p>
+                            <p><button id="resetbutton">🐀</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">5</div>
+        </section>
+        <style>
+            /* ".layout css formatting provided by https://layout.bradwoods.io/ */
+            .layout {
+                height: 100%;
+                background-color:var(--backgroundcolor1);
+
+                display: grid;
+                grid:
+                "header header header" auto
+                "leftSide body otterPad" auto
+                "footer footer footer" auto
+                / auto auto auto;
+                gap: 8px;
+            }
+            .header { grid-area: header; }
+            .leftSide { grid-area: leftSide; }
+            .body { grid-area: body; }
+            .otterPad { grid-area: otterPad; }
+            .footer { grid-area: footer; }
+            /* end of https://layout.bradwoods.io/ layouts*/
+            body {
+                height:92vh;
+                background-color:gray;
+                color:white;
+            }
+            button {
+                border-radius: 12px;
+                background-color:var(--backgroundcolor1);
+                color:darkmagenta;
+                font-size:xxx-large;
+            }
+            button:hover {
+                background-color:darkblue;
+            }
+            .otterPad {
+                outline:auto;
+                outline-color:coral;
+                padding:2vh;
+                background-color:var(--backgroundcolor1);
+                color:var(--fontcolor1);
+                display:grid;
+                grid:
+                "otterPadTitle" auto
+                "otterPadTextInput" auto
+                "otterPadExportButtons" auto
+                / auto;
+                gap: 8px;
+                margin:2vh;
+                align-self:center;
+                font-size:medium;
+            }
+            .otterPadTitle { grid-area:otterPadTitle; }
+            .otterPadTextInput { width:99%; height:var(--textinputsize); grid-area:otterPadTextInput; }
+            .otterPadExportButtons { margin : 1vh; grid-area:otterPadExportButtons; }
+            .textexportbuttons {
+                margin : 2vh;
+                width:99%;
+                height:100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-grow:1;
+
+            }
+            .textexportbuttons p {
+                padding:1vh;
+                font-size:medium;
+            }
+            .textexportbuttons p buttons {
+                padding:1vh;
+                width:12vh;
+                height:12vh;
+            }
+            #otterpadtextinput {
+                font-size:8vh;
+                width:99%;
+                height: var(--textinputsize1);
+                background-color:var(--backgroundcolor1);
+                color:var(--fontcolor1);
+            }
+            label {
+                opacity : 0;
+            }
+        </style>
+        <footer>
+            🐺🦊🐧🦎
+        </footer>
+        <p></p>
+    </body>
+    <!-- put User Styles here -->
+    <style type="text/css">
+        :root {
+            /*
+            Color Variables :
+            insert hex codes here
+            called with "var(--(variableName))"
+            */
+            /* start of Color Variables */
+            --backgroundcolor1 : black;
+            --backgroundcolor2 : gray;
+            --backgroundcolor3 : darkblue;
+            --backgroundcolor4 : darkmagenta;
+
+            --fontcolor1 : white;
+            --fontcolor2 : darkmagenta;
+            --fontcolor3 : blue;
+            --fontcolor4 : darkgray;
+            /* end of Color Variables */
+            /* start of Size Variables */
+            --textinputsize1 : 12vh;
+            /* end of Size Variables */
+        }
+        html, body {
+            width : 98%;
+            height : 92%;
+            font-family : Roboto, sans-serif ;
+        }
+    </style>
+    <!-- end of User Styles -->
+</html>
