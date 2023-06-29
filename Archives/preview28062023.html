@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Otter Pad</title>
+        <script>
+            const enterbutton = document.getElementById("enterbutton");
+            const downloadbutton = document.getElementById("downloadbutton");
+            const openbutton = document.getElementById("openbutton");
+            const runbutton = document.getElementById("runbutton");
+            var textarray = [];
+            function textenter() {
+		        var newtext = document.getElementById("textinput").value;
+		        textarray.push(newtext);
+		        var htmlstring = "";
+		        for (text in textarray) {
+		        	htmlstring += "<p>"+textarray[text]+"</p>";
+		        }
+		        document.getElementById("textoutput").innerHTML = htmlstring;
+		    }
+		    
+		    function downloadclick() {
+		    	const fileinput = document.getElementById("fileinput");
+		    	var ishidden = fileinput.hidden;
+		    	if (ishidden == true) {
+		    		fileinput.hidden = false;
+		    	} else {
+		    		fileinput.hidden = true;
+		    	}
+		    	console.log(fileinput.hidden);
+		    }
+        </script>
+    </head>
+    <body>
+        <!-- "class=layout" provided by https://layout.bradwoods.io/ -->
+        <section class="layout">
+            <div class="otterPad" width="100%">
+                <div class="otterPadTitle">
+                    <h3>Otter Pad </h3>
+                    <svg
+                    height="0.2mm"
+                    viewBox="0 0 185 0.2"
+                    version="1.1"
+                    id="pageline"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg"
+                    >
+                    <defs id="defs2" />
+                    <g
+                        id="layer1"
+                        transform="translate(-10.5,-10.4)">
+                        <path
+                            style="
+                                fill:none;
+                                stroke:#ffffff;
+                                stroke-width:0.2px;
+                                stroke-linecap:butt;
+                                stroke-linejoin:miter;
+                                stroke-opacity:1
+                            "
+                            d="M 10.5,10.5 H 195"
+                            id="pagelinepath"
+                        />
+                    </g>
+                    </svg>
+                </div>
+                <div class="otterPadTextEdit">
+                	<div class="textOutputTitleBar">
+                    	<h4>Text Edit : </h4>
+                    	<div>
+                    		<p>Reset</p>
+                    		<p><button id="resetbutton">🐀</button></p>
+                    	</div>
+                    </div>
+                    <div id="textoutput">
+                    	<div class="otterPadTextInput">
+                    		<label for="otterpadtextinput">Text Edit : </label>
+                        	<input type="text" id="textinput" name="textinput"></input>
+                        	<div>
+                            	<button id="enterbutton" onclick="textenter()">🐁<p class="buttontext">Enter</p>
+                            	</button>
+                        	</div>
+                    	</div>
+                	</div>
+                </div>
+                <div class="otterPadExportButtons">
+                    <div class="textexportbuttons">
+                        <div>
+                            <p>Download</p>
+                            <label for="fileinput"></label>
+                            <input type="file" id="fileinput" name="fileinput" multiple />
+                            <p><button id="downloadbutton" onclick="downloadclick()">🐹</button></p>
+                        </div>
+                        <div>
+                            <p>Open</p>
+                            <p><button id="openbutton">🐰</button></p>
+                        </div>
+
+                    </div>
+                </div>
+                <style>
+                    .buttontext {
+                        padding : 1vh;
+                        font-size : small;
+                        vertical-align : middle;
+                        opacity : 0.54;
+                    }
+                </style>
+                </div>
+            </div>
+        </section>
+        <style>
+            body {
+                height:92vh;
+                background-color:gray;
+                color:white;
+            }
+            button {
+                border-radius: 12px;
+                background-color:var(--backgroundcolor1);
+                color:darkmagenta;
+                font-size:xx-large;
+            }
+            button:hover {
+                background-color:darkblue;
+            }
+        </style>
+        <style>
+            .otterPad {
+                outline:auto;
+                outline-color:coral;
+                padding:2vh;
+                background-color:var(--backgroundcolor1);
+                color:var(--fontcolor1);
+                display:grid;
+                grid:
+                "otterPadTitle" auto
+                "otterPadTextEdit" auto
+                "otterPadExportButtons" auto
+                / auto;
+                gap: 8px;
+                margin:2vh;
+                align-self:center;
+                font-size:medium;
+            }
+            .otterPadTitle { grid-area:otterPadTitle; }
+            .otterPadTextEdit { height:var(--textinputsize); grid-area:otterPadTextEdit; }
+            .otterPadExportButtons { margin : 1vh; grid-area:otterPadExportButtons; }
+            .textexportbuttons {
+                margin : 2vh;
+                height:100%;
+                justify-content:space-evenly;
+                display: flex;
+                flex-grow:1;
+
+            }
+            .textexportbuttons p {
+                padding:1vh;
+                font-size:medium;
+            }
+            .textexportbuttons p button {
+                padding:1vh;
+                height:8vh;
+            }
+        </style>
+        <style>
+        	.textOutputTitleBar {
+        		display: flex;
+        		justify-content: space-between;
+        	}
+            .otterPadTextInput {
+            	padding : 2vh;
+                display : flex;
+                justify-content: space-between;
+            }
+            .otterPadTextInput button {
+            	display : flex;
+                padding : 2%;
+            }
+            #textinput {
+            	vertical-align: middle;
+                font-size:x-large;
+                height: var(--textinputsize1);
+                background-color:var(--backgroundcolor1);
+                color:var(--fontcolor1);
+            }
+        </style>
+        <style>
+            label {
+                opacity : 0;
+            }
+            #pageline {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+        <footer>
+            🐺🦊🐧🦎
+        </footer>
+        <p></p>
+    </body>
+    <!-- put User Styles here -->
+    <style type="text/css">
+        :root {
+            /*
+            Color Variables :
+            insert hex codes here
+            called with "var(--(variableName))"
+            */
+            /* start of Color Variables */
+            --backgroundcolor1 : black;
+            --backgroundcolor2 : gray;
+            --backgroundcolor3 : darkblue;
+            --backgroundcolor4 : darkmagenta;
+
+            --fontcolor1 : white;
+            --fontcolor2 : darkmagenta;
+            --fontcolor3 : coral;
+            --fontcolor4 : darkblue;
+            /* end of Color Variables */
+            /* start of Size Variables */
+            --textinputsize1 : 12vh;
+            /* end of Size Variables */
+        }
+        html, body {
+            width : 98%;
+            height : 92%;
+            font-family : Roboto, sans-serif ;
+        }
+    </style>
+    <!-- end of User Styles -->
+    <script>
+		var fileinput = document.getElementById("fileinput");
+		fileinput.hidden = true;
+    </script>
+</html>
