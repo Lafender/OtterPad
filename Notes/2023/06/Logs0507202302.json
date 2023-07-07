@@ -1,0 +1,9 @@
+{time-format: "24hh",
+0659:"apparently this is the proper format for JSON.",
+0700:"it took me an embarassingly long time to figure that out",
+"0751":"or maybe it doesn't work that way",
+"0752":"it appears so far that the only way to access json is by uploading it to a server",
+"0753":"this is weird, considering images display just fine.",
+"0754":"why is json protected when images are not?",
+
+}
