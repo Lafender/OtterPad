@@ -1,2 +1,2 @@
 # Notes
-Here are some verbose english logs I wrote while working on OtterPad
+Here are some random/assorted english notes/logs I typed while working on OtterPad.
