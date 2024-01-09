@@ -1,0 +1,12 @@
+Sizing for code : 
+xSmall (ExtraSmall = under 2v2*2logs of lines ( 2 x 2 x 2 x 2, 2 x 2 x 2 x 2 ). (in other words, under 9 lines of code).
+mSmall = under 2v2*4 logs of lines (under 17 lines of code).
+Medium = under 2v2*8 logs of lines (under 33 lines of code).
+tLarge = under 2v2*16 logs of lines (under 65 lines of code).
+dLarge = under 2v2*32 logs of lines (under 129 lines of code).
+xLarge = under 2v2*64 logs of lines (under 257 lines of code).
+Massiv = 513
+Gatlci = 1025
+Qetzal = 2049
+Catato = 4097
+Timeus = 8193
